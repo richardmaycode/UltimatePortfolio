@@ -16,6 +16,8 @@
 		9371D4DB29A516C500C8E7E9 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371D4DA29A516C500C8E7E9 /* SidebarView.swift */; };
 		9371D4DD29A516CD00C8E7E9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371D4DC29A516CD00C8E7E9 /* DetailView.swift */; };
 		9371D4DF29A517A700C8E7E9 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371D4DE29A517A700C8E7E9 /* Filter.swift */; };
+		9371D4E129A52DAA00C8E7E9 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371D4E029A52DAA00C8E7E9 /* Issue-CoreDataHelpers.swift */; };
+		9371D4E329A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371D4E229A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		9371D4DA29A516C500C8E7E9 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		9371D4DC29A516CD00C8E7E9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9371D4DE29A517A700C8E7E9 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		9371D4E029A52DAA00C8E7E9 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		9371D4E229A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				9311BC5329A4FCD20096EF2F /* Assets.xcassets */,
 				9311BC5529A4FCD20096EF2F /* UltimatePortfolio.entitlements */,
 				9311BC5629A4FCD20096EF2F /* Preview Content */,
+				9371D4E029A52DAA00C8E7E9 /* Issue-CoreDataHelpers.swift */,
+				9371D4E229A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9371D4DF29A517A700C8E7E9 /* Filter.swift in Sources */,
+				9371D4E329A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift in Sources */,
 				9311BC6029A4FFD90096EF2F /* Main.xcdatamodeld in Sources */,
+				9371D4E129A52DAA00C8E7E9 /* Issue-CoreDataHelpers.swift in Sources */,
 				9371D4DD29A516CD00C8E7E9 /* DetailView.swift in Sources */,
 				9311BC6229A502900096EF2F /* DataController.swift in Sources */,
 				9371D4DB29A516C500C8E7E9 /* SidebarView.swift in Sources */,
