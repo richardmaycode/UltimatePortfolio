@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct UltimatePortfolioApp: App {
     
-    @State var dataController = DataController()
+    @StateObject var dataController = DataController()
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {
@@ -23,6 +24,11 @@ struct UltimatePortfolioApp: App {
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .onChange(of: scenePhase) { phase in
+                if phase != .active {
+                    dataController.queueSave()
+                }
+            }
         }
     }
 }

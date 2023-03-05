@@ -11,6 +11,9 @@ class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
     
     @Published var selectedFilter: Filter? = Filter.all
+    @Published var selectedIssue: Issue?
+    
+    private var saveTask: Task<Void, Error>?
     
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -25,12 +28,23 @@ class DataController: ObservableObject {
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
         }
         
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        
+        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+        NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged)
+        
         container.loadPersistentStores { storeDescription, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
         }
     }
+    
+    func remoteStoreChanged(_ notification: Notification) {
+        objectWillChange.send()
+    }
+    
     
     func createSampleData() {
         let viewContext = container.viewContext
@@ -42,7 +56,7 @@ class DataController: ObservableObject {
             
             for j in 1...10 {
                 let issue = Issue(context: viewContext)
-                issue.title = "Issue \(j)"
+                issue.title = "Issue \(i) - \(j)"
                 issue.content = "Description goes here"
                 issue.creationDate = Date.now
                 issue.completed = Bool.random()
@@ -60,7 +74,17 @@ class DataController: ObservableObject {
         }
     }
     
+    func queueSave() {
+        saveTask? .cancel()
+        
+        saveTask = Task { @MainActor in
+            try await Task.sleep(for: .seconds(3))
+            save()
+        }
+    }
+    
     func delete(_ object: NSManagedObject) {
+        objectWillChange.send()
         container.viewContext.delete(object)
         save()
     }
@@ -83,5 +107,15 @@ class DataController: ObservableObject {
         delete(request2)
         
         save()
+    }
+    
+    func missingTags(from issue: Issue) -> [Tag] {
+        let request = Tag.fetchRequest()
+        let allTags = (try? container.viewContext.fetch(request)) ?? []
+        
+        let allTagsSet = Set(allTags)
+        let difference = allTagsSet.symmetricDifference(issue.issueTags)
+        
+        return difference.sorted()
     }
 }

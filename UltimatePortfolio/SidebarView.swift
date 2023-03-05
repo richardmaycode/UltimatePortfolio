@@ -26,6 +26,7 @@ struct SidebarView: View {
                 ForEach(smartFilters) { filter in
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
+                            .tag(filter)
                     }
                 }
             }
@@ -35,8 +36,10 @@ struct SidebarView: View {
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
                             .badge(filter.tag?.tagActiveIssues.count ?? 0)
+                            .tag(filter)
                     }
                 }
+                .onDelete(perform: delete)
             }
         }
         .toolbar {
@@ -46,6 +49,13 @@ struct SidebarView: View {
             } label: {
                 Label("Add Samples", systemImage: "flame")
             }
+        }
+    }
+    
+    func delete(_ offsets: IndexSet) {
+        for offset in offsets {
+            let item = tags[offset]
+            dataController.delete(item)
         }
     }
 }
