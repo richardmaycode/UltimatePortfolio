@@ -57,7 +57,7 @@ struct SidebarView: View {
                             }
                             .accessibilityElement()
                             .accessibilityLabel(filter.name)
-                            .accessibilityHint("^[\(filter.activeIssuesCount) issue](inflect: true)")
+                            .accessibilityHint("\(filter.activeIssuesCount) issues")
                     }
                 }
                 .onDelete(perform: delete)
@@ -65,7 +65,7 @@ struct SidebarView: View {
         }
         .toolbar {
             Button(action: dataController.newTag) {
-                Label("Add Tag", systemImage: "plus")
+                Label("Add tag", systemImage: "plus")
             }
             
             Button {
@@ -79,7 +79,7 @@ struct SidebarView: View {
                 dataController.deleteAll()
                 dataController.createSampleData()
             } label: {
-                Label("Add Samples", systemImage: "flame")
+                Label("ADD SAMPLES", systemImage: "flame")
             }
 #endif
         }
