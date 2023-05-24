@@ -24,6 +24,12 @@
 		938D03112A0AAD6000CBFF75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D03132A0AAD6000CBFF75 /* Localizable.strings */; };
 		938D03152A0AAE0700CBFF75 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 938D03172A0AAE0700CBFF75 /* Localizable.stringsdict */; };
 		938D03192A0AAF0000CBFF75 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 938D031B2A0AAF0000CBFF75 /* Awards.json */; };
+		938D031E2A1E43BB00CBFF75 /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D031D2A1E43BB00CBFF75 /* SidebarViewToolbar.swift */; };
+		938D03202A1E452E00CBFF75 /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D031F2A1E452E00CBFF75 /* IssueViewToolbar.swift */; };
+		938D03222A1E45E600CBFF75 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D03212A1E45E600CBFF75 /* ContentViewToolbar.swift */; };
+		938D03242A1E476800CBFF75 /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D03232A1E476800CBFF75 /* TagsMenuView.swift */; };
+		938D03262A1E484D00CBFF75 /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D03252A1E484D00CBFF75 /* SmartFilterRow.swift */; };
+		938D03282A1E489800CBFF75 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938D03272A1E489800CBFF75 /* UserFilterRow.swift */; };
 		93C8D5DA29E1F060003CDA2B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8D5D929E1F060003CDA2B /* Bundle-Decodable.swift */; };
 		93C8D5DE29E30A19003CDA2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C8D5DC29E30A19003CDA2B /* Colors.xcassets */; };
 		93C8D5E029E30ABC003CDA2B /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8D5DF29E30ABC003CDA2B /* Award.swift */; };
@@ -54,6 +60,12 @@
 		938D03182A0AAE0B00CBFF75 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		938D031A2A0AAF0000CBFF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		938D031C2A0AAF0500CBFF75 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
+		938D031D2A1E43BB00CBFF75 /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		938D031F2A1E452E00CBFF75 /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		938D03212A1E45E600CBFF75 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		938D03232A1E476800CBFF75 /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		938D03252A1E484D00CBFF75 /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		938D03272A1E489800CBFF75 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		93C8D5D929E1F060003CDA2B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		93C8D5DC29E30A19003CDA2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		93C8D5DF29E30ABC003CDA2B /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
@@ -95,13 +107,19 @@
 				9371D4DE29A517A700C8E7E9 /* Filter.swift */,
 				9311BC6129A502900096EF2F /* DataController.swift */,
 				9371D4DA29A516C500C8E7E9 /* SidebarView.swift */,
+				938D03272A1E489800CBFF75 /* UserFilterRow.swift */,
+				938D03252A1E484D00CBFF75 /* SmartFilterRow.swift */,
+				938D031D2A1E43BB00CBFF75 /* SidebarViewToolbar.swift */,
 				93C8D5D929E1F060003CDA2B /* Bundle-Decodable.swift */,
 				9311BC5129A4FCD10096EF2F /* ContentView.swift */,
+				938D03212A1E45E600CBFF75 /* ContentViewToolbar.swift */,
 				9337734E29A93714000CB10B /* IssueRow.swift */,
 				938D03132A0AAD6000CBFF75 /* Localizable.strings */,
 				938D03172A0AAE0700CBFF75 /* Localizable.stringsdict */,
 				9371D4DC29A516CD00C8E7E9 /* DetailView.swift */,
 				9337735029A93D36000CB10B /* IssueView.swift */,
+				938D03232A1E476800CBFF75 /* TagsMenuView.swift */,
+				938D031F2A1E452E00CBFF75 /* IssueViewToolbar.swift */,
 				9337735229A93D3D000CB10B /* NoIssueView.swift */,
 				93C8D5DF29E30ABC003CDA2B /* Award.swift */,
 				93C8D5E129E30B64003CDA2B /* AwardsView.swift */,
@@ -201,7 +219,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9371D4DF29A517A700C8E7E9 /* Filter.swift in Sources */,
+				938D03242A1E476800CBFF75 /* TagsMenuView.swift in Sources */,
 				93C8D5E029E30ABC003CDA2B /* Award.swift in Sources */,
+				938D03202A1E452E00CBFF75 /* IssueViewToolbar.swift in Sources */,
+				938D03262A1E484D00CBFF75 /* SmartFilterRow.swift in Sources */,
 				93C8D5E229E30B64003CDA2B /* AwardsView.swift in Sources */,
 				9371D4E329A52EEF00C8E7E9 /* Tag-CoreDataHelpers.swift in Sources */,
 				9311BC6029A4FFD90096EF2F /* Main.xcdatamodeld in Sources */,
@@ -209,9 +230,12 @@
 				93C8D5DA29E1F060003CDA2B /* Bundle-Decodable.swift in Sources */,
 				9371D4DD29A516CD00C8E7E9 /* DetailView.swift in Sources */,
 				9311BC6229A502900096EF2F /* DataController.swift in Sources */,
+				938D03222A1E45E600CBFF75 /* ContentViewToolbar.swift in Sources */,
 				9371D4DB29A516C500C8E7E9 /* SidebarView.swift in Sources */,
 				9311BC5229A4FCD10096EF2F /* ContentView.swift in Sources */,
+				938D031E2A1E43BB00CBFF75 /* SidebarViewToolbar.swift in Sources */,
 				9337735129A93D36000CB10B /* IssueView.swift in Sources */,
+				938D03282A1E489800CBFF75 /* UserFilterRow.swift in Sources */,
 				9337735329A93D3D000CB10B /* NoIssueView.swift in Sources */,
 				9337734F29A93714000CB10B /* IssueRow.swift in Sources */,
 				9311BC5029A4FCD10096EF2F /* UltimatePortfolioApp.swift in Sources */,

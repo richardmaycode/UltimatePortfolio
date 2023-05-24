@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NoIssueView: View {
-    
     @EnvironmentObject var dataController: DataController
     
     var body: some View {
